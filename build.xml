@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE project>
-<project name="Boilerplate Build" default="build" basedir="../"> <!-- one back since we're in build/ -->
+<project name="Boilerplate Build" default="build" basedir="../../"> <!-- TWO back since we're in build/ant/ -->
 
 
     <!-- Load in Ant-Contrib to give us access to some very useful tasks! -->
     <!-- the .jar file is located in the tools directory -->
     <taskdef resource="net/sf/antcontrib/antlib.xml">
         <classpath>
-            <pathelement location="${basedir}/build/tools/ant-contrib-1.0b3.jar"/>
+            <pathelement location="${basedir}/build/ant/tools/ant-contrib-1.0b3.jar"/>
         </classpath>
     </taskdef>
 
@@ -15,8 +15,8 @@
     <property environment="ENV" />
 
     <!-- load property files -->
-    <property file="build/config/project.properties"/>
-    <property file="build/config/default.properties"/>
+    <property file="build/ant/config/project.properties"/>
+    <property file="build/ant/config/default.properties"/>
 
     <!-- merge the stylesheet properties -->
     <var name="stylesheet-files" value="${file.default.stylesheets}, ${file.stylesheets}"/>
